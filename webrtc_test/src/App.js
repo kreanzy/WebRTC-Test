@@ -7,6 +7,7 @@ import PhoneIcon from "@material-ui/icons/Phone"
 import MicIcon from '@material-ui/icons/Mic';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import VolumeMuteIcon from '@material-ui/icons/VolumeMute';
+import PhoneCallbackIcon from '@material-ui/icons/PhoneCallback';
 import React, { useEffect, useRef, useState } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import Peer from "simple-peer"
@@ -210,9 +211,9 @@ function App() {
         {receivingCall && !callAccepted ? (
           <div className="caller">
             <h1 >{userName} is calling...</h1>
-            <Button variant="contained" color="primary" onClick={answerCall}>
-              Answer
-						</Button>
+            <IconButton color="primary" aria-label="Video" style = {{ color : "Chartreuse"}} onClick={answerCall}>
+              <PhoneCallbackIcon fontSize="large" />
+            </IconButton>
           </div>
         ) : null}
       </div>
